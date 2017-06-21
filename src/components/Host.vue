@@ -1,9 +1,6 @@
 <template>
-  <div class="join">
+  <div class="host">
     <form>
-      <div class="form-group">
-        <input type="text" class="form-control" id="gameId" placeholder="Game Id">
-      </div>
       <div class="form-group">
         <input type="text" class="form-control" id="username" placeholder="Username">
       </div>
@@ -16,8 +13,8 @@
 </script>
 
 <style scoped>
-.form-control {
-  max-width: 250px;
-  min-width: 200px;
-}
+  .form-control {
+    max-width: 250px;
+    min-width: 200px;
+  }
 </style>

@@ -7,11 +7,11 @@
     </div>
     <div class="row">
       <div class="col-md-offset-5 col-md-1">
-        <router-link to="/game">
+        <router-link to="/host">
           <a class="btn btn-success">Host Game</a>
         </router-link>
       </div>
-      <div class="col-md-2">
+      <div class="right-button col-md-2">
         <router-link to="/join">
           <a class="btn btn-primary">Join Game</a>
         </router-link>
@@ -24,6 +24,9 @@
 </script>
 
 <style scoped>
+  .right-button {
+    margin-left: 20px;
+  }
   .fit {
     width:100%;
   }
