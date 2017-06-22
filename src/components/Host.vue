@@ -4,7 +4,7 @@
       <div class="form-group">
         <input type="text" class="form-control" id="username" placeholder="Username">
       </div>
-      <button type="submit" class="btn btn-success">Join Game</button>
+      <button type="submit" class="btn btn-success">Host Game</button>
     </form>
   </div>
 </template>
