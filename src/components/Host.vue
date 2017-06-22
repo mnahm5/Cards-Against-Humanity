@@ -2,14 +2,30 @@
   <div class="host">
     <form>
       <div class="form-group">
-        <input type="text" class="form-control" id="username" placeholder="Username">
+        <input type="text" class="form-control" id="username" placeholder="Username" v-model="userData.username">
       </div>
       <button type="submit" class="btn btn-success">Host Game</button>
     </form>
   </div>
 </template>
 <script>
+  import { mapGetters, mapActions } from 'vuex'
 
+  export default {
+    computed: {
+      ...mapGetters([
+        'userData'
+      ])
+    },
+    methods: {
+      ...mapActions([
+        'saveUserData'
+      ]),
+      save () {
+        this.saveUserData()
+      }
+    }
+  }
 </script>
 
 <style scoped>
