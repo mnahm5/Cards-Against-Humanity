@@ -7,7 +7,7 @@
       <div class="form-group">
         <input type="text" class="form-control" id="username" placeholder="Username" v-model="userData.username">
       </div>
-      <button type="submit" class="btn btn-success">Join Game</button>
+      <button type="submit" class="btn btn-primary">Join Game</button>
     </form>
   </div>
 </template>
