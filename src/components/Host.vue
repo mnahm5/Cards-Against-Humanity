@@ -13,8 +13,22 @@
 </template>
 <script>
   import { mapGetters, mapActions } from 'vuex'
+  import {db} from '../firebase-connect'
 
   export default {
+    data: () => ({
+      games: {}
+    }),
+
+    firebase: {
+      games: {
+        source: db.ref('games'),
+        // Optional, allows you to handle any errors.
+        cancelCallback (err) {
+          console.error(err)
+        }
+      }
+    },
     computed: {
       ...mapGetters([
         'userData'
@@ -31,6 +45,10 @@
           charset: 'alphanumeric'
         })
         this.saveUserData()
+        this.$firebaseRefs.games.push({
+          gameID: this.userData.gameId,
+          username: [this.userData.username]
+        })
         this.$router.push({
           path: 'game'
         })
