@@ -1,8 +1,11 @@
 <template>
   <div class="host">
-    <form>
+    <form v-on:submit="save">
       <div class="form-group">
         <input type="text" class="form-control" id="username" placeholder="Username" v-model="userData.username">
+      </div>
+      <div class="form-group">
+        <input type="hidden" class="form-control" id="gameId" placeholder="Username" v-model="userData.gameId">
       </div>
       <button type="submit" class="btn btn-success">Host Game</button>
     </form>
@@ -22,7 +25,15 @@
         'saveUserData'
       ]),
       save () {
+        const randomstring = require('randomstring')
+        this.userData.gameId = randomstring.generate({
+          length: 4,
+          charset: 'alphanumeric'
+        })
         this.saveUserData()
+        this.$router.push({
+          path: 'game'
+        })
       }
     }
   }

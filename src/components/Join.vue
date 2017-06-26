@@ -26,6 +26,9 @@
       ]),
       save () {
         this.saveUserData()
+        this.$router.push({
+          path: 'game'
+        })
       }
     }
   }
