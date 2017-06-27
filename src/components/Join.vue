@@ -19,7 +19,6 @@
     data: () => ({
       games: {}
     }),
-
     firebase: {
       games: {
         source: db.ref('games'),
@@ -60,11 +59,11 @@
         })
         if (gameKey) {
           this.$firebaseRefs.games.child(gameKey).child('usernames').set(usernames)
+          this.saveUserData()
+          this.$router.push({
+            path: 'game'
+          })
         }
-        this.saveUserData()
-        this.$router.push({
-          path: 'game'
-        })
       }
     }
   }

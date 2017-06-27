@@ -4,6 +4,7 @@ import Home from '@/components/Home'
 import Join from '@/components/Join'
 import Game from '@/components/Game'
 import Host from '@/components/Host'
+import Upload from '@/components/Upload'
 
 Vue.use(Router)
 
@@ -28,6 +29,11 @@ export default new Router({
       path: '/game',
       name: Game,
       component: Game
+    },
+    {
+      path: '/upload',
+      name: Upload,
+      component: Upload
     }
   ]
 })
