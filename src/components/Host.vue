@@ -47,7 +47,7 @@
         this.saveUserData()
         this.$firebaseRefs.games.push({
           gameID: this.userData.gameId,
-          username: [this.userData.username]
+          usernames: [this.userData.username]
         })
         this.$router.push({
           path: 'game'
